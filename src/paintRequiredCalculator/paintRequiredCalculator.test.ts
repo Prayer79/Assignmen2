@@ -12,6 +12,11 @@ describe("paintRequiredCalculator", () => {
   });
 
   test.todo("should return 0 if coverage per liter is extremely high");
-  test.todo("should throw an error for negative values");
+
+  test("should throw an error for negative values", () => {
+    expect(() => paintRequiredCalculator(-50, 10)).toThrow("Invalid input");
+    expect(() => paintRequiredCalculator(50, -10)).toThrow("Invalid input");
+  });
+
   test.todo("should handle non-numeric input gracefully");
 });
