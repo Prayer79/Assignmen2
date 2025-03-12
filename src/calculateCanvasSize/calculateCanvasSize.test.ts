@@ -17,5 +17,8 @@ describe("calculateCanvasSize", () => {
     expect(() => calculateCanvasSize("10", "xyz")).toThrow("Invalid input");
   });
 
-  test.todo("should throw an error for missing inputs");
+  test("should throw an error for missing inputs", () => {
+    expect(() => calculateCanvasSize("10")).toThrow("Missing input");
+    expect(() => calculateCanvasSize()).toThrow("Missing input");
+  });
 });
