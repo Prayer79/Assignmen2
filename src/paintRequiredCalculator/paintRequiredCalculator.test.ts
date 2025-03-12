@@ -7,7 +7,10 @@ describe("paintRequiredCalculator", () => {
   });
 
   // Adding missing test cases
-  test.todo("should return 0 if area is 0");
+  test("should return 0 if area is 0", () => {
+    expect(paintRequiredCalculator(0, 10)).toBe(0);
+  });
+
   test.todo("should return 0 if coverage per liter is extremely high");
   test.todo("should throw an error for negative values");
   test.todo("should handle non-numeric input gracefully");
