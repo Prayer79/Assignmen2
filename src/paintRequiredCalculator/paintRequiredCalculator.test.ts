@@ -20,5 +20,12 @@ describe("paintRequiredCalculator", () => {
     expect(() => paintRequiredCalculator(50, -10)).toThrow("Invalid input");
   });
 
-  test.todo("should handle non-numeric input gracefully");
+  test("should handle non-numeric input gracefully", () => {
+    expect(() => paintRequiredCalculator("abc" as any, 10)).toThrow(
+      "Invalid input"
+    );
+    expect(() => paintRequiredCalculator(50, "xyz" as any)).toThrow(
+      "Invalid input"
+    );
+  });
 });
