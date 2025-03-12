@@ -7,7 +7,11 @@ describe("calculateCanvasSize", () => {
   });
 
   // Adding missing test cases
-  test.todo("should return 0 if any input is '0'");
+  test("should return 0 if any input is '0'", () => {
+    expect(calculateCanvasSize("0", "50")).toBe(0);
+    expect(calculateCanvasSize("50", "0")).toBe(0);
+  });
+
   test.todo("should handle non-numeric input gracefully");
   test.todo("should throw an error for missing inputs");
 });
