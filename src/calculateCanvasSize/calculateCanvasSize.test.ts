@@ -12,6 +12,10 @@ describe("calculateCanvasSize", () => {
     expect(calculateCanvasSize("50", "0")).toBe(0);
   });
 
-  test.todo("should handle non-numeric input gracefully");
+  test("should handle non-numeric input gracefully", () => {
+    expect(() => calculateCanvasSize("abc", "10")).toThrow("Invalid input");
+    expect(() => calculateCanvasSize("10", "xyz")).toThrow("Invalid input");
+  });
+
   test.todo("should throw an error for missing inputs");
 });
